@@ -1,28 +1,22 @@
 # Disease Prediction Toolkit 🧠
 
-A modular **classical machine-learning workflow** for experimenting with disease-risk classification using a heart-disease dataset. The project is structured to separate preprocessing, model training, evaluation, visualization, and tests.
+A modular **classical machine-learning workflow** for experimenting with disease-risk classification using a heart-disease dataset. The project separates preprocessing, model training, evaluation, visualization, and tests.
 
 > **Disclaimer:** This is an educational ML project and is **not a medical diagnostic tool**.
 
-## 🔎 What It Demonstrates
+## 🏗️ ML Pipeline
 
-```text
-Dataset
-   ↓
-Data Cleaning & Encoding
-   ↓
-Feature Scaling
-   ↓
-Train / Test Split
-   ↓
-Multiple Classifiers
-   ↓
-Evaluation & Comparison
-   ↓
-Visualizations
+```mermaid
+flowchart LR
+    A[Dataset] --> B[Cleaning + Encoding]
+    B --> C[Feature Scaling]
+    C --> D[Stratified Train/Test Split]
+    D --> E[Multiple Classifiers]
+    E --> F[Evaluation]
+    F --> G[Model Comparison + Visualizations]
 ```
 
-## ✨ Features
+## ✨ What It Demonstrates
 
 - Exploratory data analysis
 - Missing-value handling
@@ -92,6 +86,22 @@ Run tests:
 
 ```bash
 pytest
+```
+
+## 🔁 Reproducibility Flow
+
+```text
+Raw dataset
+    ↓
+Preprocessing
+    ↓
+Train/Test split
+    ↓
+Model training
+    ↓
+Evaluation
+    ↓
+Saved experiments / visualizations
 ```
 
 ## 🚀 Future Improvements
