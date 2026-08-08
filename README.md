@@ -1,64 +1,80 @@
-# Disease Prediction Toolkit
+# Disease Prediction Toolkit 🧠
 
-A modular machine-learning project for exploring healthcare classification workflows using the UCI-style heart disease dataset.
+A modular **classical machine-learning workflow** for experimenting with disease-risk classification using a heart-disease dataset. The project is structured to separate preprocessing, model training, evaluation, visualization, and tests.
 
-## Overview
+> **Disclaimer:** This is an educational ML project and is **not a medical diagnostic tool**.
 
-This project demonstrates an end-to-end classical ML workflow:
+## 🔎 What It Demonstrates
 
-**data loading → preprocessing → model training → evaluation → visualization**
+```text
+Dataset
+   ↓
+Data Cleaning & Encoding
+   ↓
+Feature Scaling
+   ↓
+Train / Test Split
+   ↓
+Multiple Classifiers
+   ↓
+Evaluation & Comparison
+   ↓
+Visualizations
+```
 
-It is intended for learning and experimentation with machine-learning pipelines and is **not a medical diagnostic tool**.
+## ✨ Features
 
-## Features
-
-- Data loading and exploratory analysis
+- Exploratory data analysis
 - Missing-value handling
 - Categorical feature encoding
 - Feature standardization
-- Train/test splitting with stratification
-- Multiple classification models
-- Model comparison using common evaluation metrics
-- Random Forest hyperparameter optimization with GridSearchCV
-- Evaluation visualizations including confusion matrices and ROC curves
-- Automated tests for preprocessing, model training and evaluation
+- Stratified train/test splitting
+- Multiple classification algorithms
+- Random Forest hyperparameter tuning with `GridSearchCV`
+- Accuracy, Precision, Recall and F1 evaluation
+- ROC-AUC analysis
+- Confusion matrices and visualization
+- Automated tests for core ML components
 
-## Models
+## 🤖 Models
 
-- Logistic Regression
-- Decision Tree
-- Random Forest
-- Gradient Boosting
-- Support Vector Machine (SVM)
-- Optimized Random Forest
+| Model | Purpose |
+|---|---|
+| Logistic Regression | Interpretable baseline |
+| Decision Tree | Rule-based classification |
+| Random Forest | Ensemble baseline |
+| Gradient Boosting | Boosted ensemble model |
+| SVM | Margin-based classifier |
+| Optimized Random Forest | Hyperparameter-tuned model |
 
-## Evaluation Metrics
+## 📊 Evaluation
 
-The project evaluates models using:
+The toolkit evaluates models using:
 
 - Accuracy
 - Precision
 - Recall
 - F1-Score
 - ROC-AUC
+- Confusion Matrix
 
-## Project Structure
+## 📁 Structure
 
 ```text
 Disease-Prediction-Toolkit/
-├── Project.ipynb          # End-to-end experimentation notebook
-├── heart.csv              # Dataset
+├── Project.ipynb
+├── heart.csv
 ├── src/
-│   ├── preprocessing.py   # Data preparation pipeline
-│   ├── models.py          # Model training and optimization
-│   ├── evaluation.py      # Metrics and evaluation plots
-│   └── visualization.py   # Exploratory visualizations
-├── Requirements           # Python dependencies
-├── Test File              # Current test suite
+│   ├── preprocessing.py
+│   ├── models.py
+│   ├── evaluation.py
+│   └── visualization.py
+├── Requirements
+├── Test File
 └── README.md
 ```
 
-## Installation
+## ⚙️ Setup
 
 ```bash
 git clone https://github.com/deadlyrps2802/disease-prediction-toolkit.git
@@ -66,30 +82,28 @@ cd disease-prediction-toolkit
 pip install -r Requirements
 ```
 
-## Usage
+Run the notebook with Jupyter/JupyterLab:
 
-Open `Project.ipynb` in Jupyter Notebook or JupyterLab and run the workflow step by step.
+```bash
+jupyter notebook Project.ipynb
+```
 
-The reusable functionality is organized under `src/` so the preprocessing, training and evaluation components can also be imported independently.
-
-## Testing
-
-The repository includes tests covering preprocessing, model training and evaluation. Run them with:
+Run tests:
 
 ```bash
 pytest
 ```
 
-## Future Improvements
+## 🚀 Future Improvements
 
-- Add a reproducible training script and CLI
-- Add stronger pipeline abstractions with `sklearn.Pipeline`
-- Add cross-validation and reproducible experiment tracking
-- Add a lightweight web API for inference
-- Add CI with automated tests
+- Reproducible training CLI
+- `sklearn.Pipeline` based preprocessing
+- Cross-validation and experiment tracking
+- Lightweight inference API
+- CI pipeline for automated testing
 
 ## Author
 
-**Rudra Pratap Singh**
+**Rudra Pratap Singh** — B.Tech CSE (AI)
 
-GitHub: https://github.com/deadlyrps2802
+GitHub: [@deadlyrps2802](https://github.com/deadlyrps2802)
